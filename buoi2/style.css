@@ -1,7 +1,7 @@
 body{
-    background-color: rgb(251, 251, 252);
     font-family: sans-serif;
     font-size: 18px;
+    background-color: rgb(40, 40, 40);
 }
 #watermark{
     text-align: right;
@@ -18,20 +18,33 @@ body{
     color: rgb(211, 65, 39);
     font-weight: 700;
 }
-ul{
-    padding-left: 15px;
+ul.custom-indent {
+    list-style-position: outside;
+    padding-left: 0; /* Xóa padding của ul */
 }
+
+ul.custom {
+  list-style-position: outside;
+  padding-left: 16px; /* Bỏ padding mặc định */
+}
+
+ul.custom li {
+  padding-left: 3.2em; /* Giữ nội dung ở vị trí hiện tại */
+  text-indent: -2em; /* Kéo bullet ra trái */
+}
+
+
 .project {
     background-color: rgb(238, 235, 235);
     width: 100%;
     padding: 10px 20px;
-    
+    box-sizing: border-box; /*khong bi tran ra ngoai*/
     text-align: justify;
     margin-bottom: 15px;
 }
 
 .project p {
-    margin: 6px 0; /* Loại bỏ margin dư khiến phần tử tràn ra */
+    margin: 6px 0; /* giam khoang cach giua cac dong */
     line-height: 0.8;
 }
 .daumuc2{
@@ -46,7 +59,11 @@ ul{
 #container {
     max-width: 1000px;
     margin: 0 auto;
-    background-color: white; /* tùy chọn, nếu muốn có nền riêng cho phần nội dung */
-    padding: 20px; /* tùy chọn, nếu muốn cách lề bên trong */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* tùy chọn, để đẹp hơn */
+    background-color: rgb(251, 251, 252);
+    padding: 20px;
+    color: #555;
+}
+#container b,
+#container .daumuc2{
+    color: #333;
 }
