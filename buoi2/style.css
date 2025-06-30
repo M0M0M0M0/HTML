@@ -1,0 +1,36 @@
+body{
+    background-color: rgb(251, 251, 252);
+    margin: 20px;
+    width: 1000px;
+    font-family: arial;
+}
+#watermark{
+    text-align: right;
+    color: red;
+    font-style: italic;
+    font-size: x-small;
+}
+#info{
+    text-align: center;
+    line-height: 0px;
+}
+.daumuc{
+    font-size: larger;
+    color: brown;
+    font-weight: 700;
+}
+ul{
+    padding-left: 15px;
+}
+.project{
+    background-color: rgb(238, 235, 235);
+    width: 100%;
+    line-height: 0.5;
+    padding-left: 20px;
+    display: block;
+    text-align: justify;
+    
+}
+.daumuc2{
+    font-size: larger;
+}
