@@ -60,7 +60,7 @@ body{
 /* dieu chinh bullet cua list */
 ul.custom {
   list-style-position: outside;
-  padding-left: 16px; /* Bỏ padding mặc định */
+  padding-left: 16px; 
 }
 
 ul.custom li {
@@ -70,7 +70,7 @@ ul.custom li {
 hr {
   border: none;
   height: 2px;
-  background-color: rgba(0, 0, 0, 0.29); /* màu xám nhạt trong suốt */
+  background-color: rgba(0, 0, 0, 0.29); 
   margin: 20px 0;
 }
 
