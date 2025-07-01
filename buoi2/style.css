@@ -55,7 +55,7 @@ body{
 }
 .project p {
     margin: 6px 0; /* giam khoang cach giua cac dong */
-    line-height: 0.8;
+    line-height: 0.9;
 }
 /* dieu chinh bullet cua list */
 ul.custom {
