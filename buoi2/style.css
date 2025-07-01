@@ -29,8 +29,12 @@ body{
 }
 #info{
     text-align: center;
-    line-height: 1;
     margin: px 0;
+}
+#info p {
+  margin: 0;
+  padding: 0;
+  line-height: 1;
 }
 /* class */
 .daumuc{
@@ -62,6 +66,15 @@ ul.custom {
 ul.custom li {
   padding-left: 1.2em; /* dich noi dung sang phai */
 }
+/* gach ngang */
+hr {
+  border: none;
+  height: 2px;
+  background-color: rgba(0, 0, 0, 0.29); /* màu xám nhạt trong suốt */
+  margin: 20px 0;
+}
+
+
 
 
 
