@@ -29,7 +29,8 @@ body{
 }
 #info{
     text-align: center;
-    line-height: 0px;
+    line-height: 1;
+    margin: px 0;
 }
 /* class */
 .daumuc{
