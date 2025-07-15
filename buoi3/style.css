@@ -82,9 +82,14 @@ hr{
     font-weight: bold;
     margin-bottom: 0;
     line-height: 0.7;
+<<<<<<< HEAD
     padding-top: 25px;
 }
 
+=======
+    padding-top: 60px;
+}
+>>>>>>> 78684d586e7f262d2bd75c69a90fe1d5fe0b23a2
 .job {
     display: flex;
     justify-content: space-between;
