@@ -1,0 +1,68 @@
+.box1{
+    float: left;
+    width: calc(30% - 30px);
+    background-color: rgb(47, 58, 64);
+    color: aliceblue;
+    padding-left: 30px;
+}
+.box2{
+    float: right;
+    width: calc(70% - 30px);
+    height: 100%;
+    color: rgb(47, 58, 64);
+    padding-left: 30px;
+    background-color: rgb(251, 251, 252);
+}
+#box{
+    width: 1200px;
+    box-sizing: border-box;
+    background-color: rgb(251, 251, 252);
+    margin: 0 auto;
+    font-family: sans-serif;
+}
+body{
+    background-color: rgba(40, 40, 40, 0.519);
+}
+/* box1 */
+#avatar{
+    width: 200px;
+    height: 200px;
+    margin: 20px auto;
+    display: block;
+}
+.icons{
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    margin-right: 10px;
+    background-color: aliceblue;
+    padding: 3px; /* tao o mau trang o sau icon*/
+    transform: translate(0px,4px);
+}
+#info{
+    
+}
+#chungchi,#nguoithamchieu{
+    margin: 40px 0;
+    line-height: 0.6;
+}
+.thamchieu{
+    margin-top: 0px;  
+    margin-bottom: 25px;
+    line-height: 0.5;
+}
+hr{
+    width: 70px;
+    float: left;
+    margin-top: 0px;
+}
+/* box2 */
+#name{
+    font-size: 200%;
+    font-weight: bold;
+}
+/* others */
+.daumuc{
+    font-size: 140%;
+    font-weight: 700;
+}
