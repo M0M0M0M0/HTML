@@ -1,0 +1,227 @@
+* {
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f3f3f3;
+}
+
+header {
+  text-align: center;
+  padding: 20px 0 10px;
+  background-color: white;
+  border-bottom: 1px solid #ddd;
+}
+
+.brand {
+  font-size: 28px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.steps {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100px;
+  position: relative;
+}
+
+.circle {
+  width: 30px;
+  height: 30px;
+  background-color: #ccc;
+  border-radius: 50%;
+  color: white;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.step.active .circle {
+  background-color: black;
+}
+
+.step span {
+  margin-top: 8px;
+  font-size: 14px;
+  color: #555;
+}
+
+.line {
+  height: 2px;
+  background-color: #ccc;
+  width: 400px;
+  transform: translateY(-10px);
+}
+
+
+.container {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 30px auto;
+}
+
+.form-container {
+  background: #fff;
+  padding: 30px;
+  width: 60%;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.summary-container {
+  width: 30%;
+}
+
+.summary-box {
+  background: #fff;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  margin: 8px 0;
+}
+
+.summary-row.total {
+  font-weight: bold;
+}
+
+.product {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.product-info p {
+  margin: 4px 0;
+  font-size: 14px;
+}
+
+h2, h3, h4 {
+  margin-top: 0;
+}
+
+form .row {
+  display: flex;
+  gap: 20px;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+  flex: 1;
+}
+
+.input-group input,
+.input-group select {
+  padding: 10px;
+  font-size: 14px;
+  margin-top: 4px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.input-group .error {
+  color: red;
+  font-size: 12px;
+  margin-top: 2px;
+}
+
+.checkbox {
+  margin-bottom: 20px;
+}
+
+.checkbox label {
+  margin-left: 8px;
+  font-size: 14px;
+}
+
+button {
+  background: #111;
+  color: #fff;
+  padding: 14px;
+  font-size: 14px;
+  width: 100%;
+  border: none;
+  cursor: pointer;
+}
+.floating-group {
+  position: relative;
+  margin-bottom: 25px;
+  transform: translateY(20px);
+}
+
+.floating-group input {
+  width: 100%;
+  padding: 16px 12px 8px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+}
+
+.floating-group label {
+  position: absolute;
+  top: 16px;
+  left: 12px;
+  color: #999;
+  font-size: 16px;
+  background: white;
+  padding: 0 4px;
+  transition: all 0.1s ease;
+  pointer-events: none;
+}
+
+
+.floating-group input:focus + label,
+.floating-group input:not(:placeholder-shown) + label {
+  top: 4px;
+  left: 8px;
+  font-size: 12px;
+  color: #555;
+}
+
+#phone {
+  padding: 1rem 0.5rem 0.25rem 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+}
+
+
+label[for="phone"] {
+  position: absolute;
+  top: 0.3rem;
+  left: 0.5rem;
+  font-size: 0.75rem;
+  color: #999;
+  pointer-events: none;
+}
+
+
+.floating-group.always-float label[for="phone"] {
+  top: 0.3rem;
+  font-size: 0.75rem;
+  color: #555;
+}
+
