@@ -4,7 +4,7 @@ var r = Math.random(); // Lay so ngau nhien tu 0 den 1
 r = r*100;
 r= parseInt(r); // Chuyen so ngau nhien sang so nguyen
 if (x == r) {
-    alert("Chuc mung ban da doan dung so " + r + " va nhan duoc " + money*70 + " dong");
+    alert("Chuc mung ban da doan dung so va nhan duoc " + money*70 + " dong");
 }else{
-    alert("Ban da doan sai so " + r + " va mat " + money + " dong");
+    alert("Ban da doan sai so va mat " + money + " dong");
 }
