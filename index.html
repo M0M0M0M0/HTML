@@ -4,8 +4,111 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="css/demo4.css">
 </head>
 <body>
-    <h1>Index</h1>
+    <nav class="navbar three-column">
+        <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+
+        <!-- Nút ☰ chỉ hiển thị khi menu chưa mở -->
+        <label for="menu-toggle" class="menu-icon open">&#9776;</label>
+
+        <div class="navbar-logo a-left">
+            <img src="img/logo/logo.png" id="header-logo" alt="Logo" />
+        </div>
+
+        <div class="content">
+            <ul class="navbar-menu">
+                <label for="menu-toggle" class="menu-icon close">&times;</label>
+
+                <li><a href="#">HOME</a></li>
+
+                <li class="dropdown">
+                    <a href="#">SHOP</a>
+                    <ul class="dropdown-menu">
+                        <li class="dropdown-submenu">
+                            <a href="#">Fruits</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Apple</a></li>
+                                <li><a href="#">Orange</a></li>
+                                <li><a href="#">Banana</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown-submenu">
+                            <a href="#">Vegetables</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Spinach</a></li>
+                                <li><a href="#">Carrot</a></li>
+                                <li><a href="#">Zucchini</a></li>
+                                <li><a href="#">Broccoli</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Organic Juices</a></li>
+                        <li><a href="#">Today's Deals</a></li>
+                        <li><a href="#">Drinks</a></li>
+                    </ul>
+                </li>
+
+                <li class="dropdown">
+                    <a href="#">PAGES</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Our Story</a></li>
+                        <li><a href="#">Production Standards</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li class="dropdown-submenu">
+                            <a href="#">About Us</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Our Team</a></li>
+                                <li><a href="#">Our Story</a></li>
+                                <li><a href="#">Careers</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="dropdown">
+                    <a href="#">FEATURES</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Fast Delivery</a></li>
+                        <li><a href="#">Quality Assurance</a></li>
+                        <li><a href="#">Seasonal Produce</a></li>
+                        <li><a href="#">Storage Guide</a></li>
+                    </ul>
+                </li>
+
+                <li class="dropdown">
+                    <a href="#">BLOG</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Healthy Eating Tips</a></li>
+                        <li><a href="#">Vegetable Recipes</a></li>
+                        <li><a href="#">Customer Stories</a></li>
+                        <li><a href="#">Promotions & Events</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="#">CONTACT</a></li>
+            </ul>
+        </div>
+
+        <div class="a-right navbar-icons">
+            <div class="search-container">
+                <input type="text" placeholder="Search..." id="search-input" />
+                <label for="search-input" class="search-icon">
+                    <img src="img/icons/search.png" alt="search icon" id="search-icon-img" />
+                </label>
+            </div>
+            <div class="cart-container">
+                <a href="#">
+                    <img src="img/icons/shopping-cart.png" alt="cart icon" id="cart-icon-img" />
+                    <span class="cart-count">0</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+    <script type="text/javascript" src="js/demo4.js">
+        
+    </script>
 </body>
 </html>
