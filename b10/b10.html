@@ -9,7 +9,22 @@
 <body>
     <main class="section main">
         <div class="container">
-            <h1>Bay thoi trang cao cap danh cho hoa hau</h1>
+            <h1 id="sp_name">vay thoi trang cao cap danh cho hoa hau</h1>
+            <p>Gia tien: <span id="price">12</span>$</p>
+            <p>So luong: <Span id="qty">3</Span></p>
+            <script type="text/javascript">
+                var sp = {
+                    name: "Tui Gucci",
+                    price: 20,
+                    qty: 30
+                }
+                var sp_name = document.getElementById("sp_name");
+                sp_name.innerHTML = sp.name;
+                var price = document.getElementById("price");
+                price.innerHTML = sp.price; 
+                var qty = document.getElementById("qty");
+                qty.innerHTML = sp.qty;
+            </script>
         </div>
     </main>
 </body>
