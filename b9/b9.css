@@ -1,0 +1,109 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background-color: #f4a261;
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#openModal {
+  background-color: #8d5c7f;
+  color: #fff;
+  padding: 16px 32px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+
+.modal {
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  width: 400px;
+  position: relative;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+}
+
+.modal h2 {
+  margin-top: 0;
+}
+
+.modal input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.modal .buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.continue {
+  background-color: #f2645a;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.cancel {
+  background: none;
+  border: none;
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+@keyframes jelly {
+  0% {
+    transform: scale(0.7);
+    opacity: 0;
+  }
+  40% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+  60% {
+    transform: scale(0.95);
+  }
+  80% {
+    transform: scale(1.02);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

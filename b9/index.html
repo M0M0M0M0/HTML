@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Modal Example</title>
+  <link rel="stylesheet" href="b9.css" />
+</head>
+<body>
+  <div class="container">
+    <button id="openModal">Show Modal</button>
+  </div>
+
+  <div class="modal-overlay" id="modal">
+    <div class="modal">
+      <button class="close" id="closeModal">&times;</button>
+      <h2>Create a post</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium necessitatibus omnis, eaque ratione sunt commodi.</p>
+      <label for="campaign">Campaign Name</label>
+      <input type="text" id="campaign" placeholder="Ex. Get 50% off" />
+      <div class="buttons">
+        <button class="continue">Continue</button>
+        <button class="cancel" id="closeModal2">Cancel</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="b9.js"></script>
+</body>
+</html>
