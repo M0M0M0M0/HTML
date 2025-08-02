@@ -12,18 +12,32 @@
             <h1 id="sp_name">vay thoi trang cao cap danh cho hoa hau</h1>
             <p>Gia tien: <span id="price">12</span>$</p>
             <p>So luong: <Span id="qty">3</Span></p>
+            <p>Rate: <span id="rating">0</span> - <span id="comment"> abc</span></p>
+            <img src="../images/bird.jpg" alt="" id="thumbnail">
             <script type="text/javascript">
+                //call api to get data
+                const url = "http://127.0.0.1:5500/data/sp.json";
+                fetch(url)
+                    .then(response => response.json())
+                    .then(data => {
+                        document.getElementById("sp_name").innerText = data.name;
+                        document.getElementById("price").innerText = data.price;
+                        document.getElementById("qty").innerText = data.qty;
+                        document.getElementById("thumbnail").src = data.thumbnail;
+                        document.getElementById("rating").innerText = data.review.rating;
+                        document.getElementById("comment").innerText = data.review.comment;
+                    })
+                    .catch(error => console.error('Error fetching data:', error));
                 var sp = {
                     name: "Tui Gucci",
                     price: 20,
-                    qty: 30
+                    qty: 30,
+                    thumbnail: "../images/lake.jpg"
                 }
-                var sp_name = document.getElementById("sp_name");
-                sp_name.innerHTML = sp.name;
-                var price = document.getElementById("price");
-                price.innerHTML = sp.price; 
-                var qty = document.getElementById("qty");
-                qty.innerHTML = sp.qty;
+                // document.getElementById("sp_name").innerText = sp.name;
+                // document.getElementById("price").innerText = sp.price;
+                // document.getElementById("qty").innerText = sp.qty;
+                // document.getElementById("thumbnail").src = sp.thumbnail;
             </script>
         </div>
     </main>

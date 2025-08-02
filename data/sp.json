@@ -1,0 +1,10 @@
+{
+    "name": "dong ho casio",
+    "price": 100,
+    "qty": 10,
+    "thumbnail": "../images/rock.jpg",
+    "review": {
+        "rating": 4.5,
+        "comment": "Good product"
+    }
+}
