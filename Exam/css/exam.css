@@ -37,7 +37,7 @@ nav a {
     width: 300px;
     padding: 0.5em;
     border: 1px solid #ccc;
-    border-radius: 4px;
+    border-radius: 15px;
 }
 .content {
     flex: 1;
@@ -128,4 +128,7 @@ a {
 
 a:hover {
   color: #003399;
+}
+#logo-link{
+  text-decoration: none;
 }
