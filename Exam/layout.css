@@ -34,6 +34,7 @@ p{
     float: none;
     margin: 0 auto;
     width: 1200px;
+    border: 2px solid #797979;
 }
 /* .nav { */
     /* background-color: #333; */
