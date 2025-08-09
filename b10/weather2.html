@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="weather.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="weather-box">
+        <div class="search-box">
+            <input type="text" id="city-input" placeholder="Nhập tên thành phố...">
+            <ul id="suggestions" class="suggestions"></ul>
+        </div>
+        <img src="src" alt="" class="weather-icon">
+        <div class="temperature">
+            <span class="temp">33</span>
+            &nbsp;
+            <span class="unit-switch cel">°C</span>
+            <span class="unit-switch">|</span>
+            <span class="unit-switch fah">°F</span>
+        </div>
+        <div class="details">
+            <div class="description">Description</div>
+            <div>Humidity: <span class="humidity">65</span>%</div>
+            <div>Wind: <span class="wind">13</span> km/h</div>
+            <div>Feels like <span class="feels_like">33</span>°C</div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        const cityList = [
+            "Hanoi", "Ho Chi Minh", "Da Nang", "London", "New York", "Paris", "Tokyo", "Seoul", "Bangkok", "Sydney"
+        ];
+
+        const cityInput = document.getElementById("city-input");
+        const suggestions = document.getElementById("suggestions");
+
+        cityInput.addEventListener("input", () => {
+            const input = cityInput.value.toLowerCase();
+            suggestions.innerHTML = "";
+            if (input.length === 0) {
+                suggestions.style.display = "none";
+                return;
+            }
+
+            const filtered = cityList.filter(city => city.toLowerCase().includes(input));
+            filtered.forEach(city => {
+                const li = document.createElement("li");
+                li.textContent = city;
+                li.addEventListener("click", () => {
+                    cityInput.value = city;
+                    suggestions.style.display = "none";
+                    fetchWeather(city);
+                });
+                suggestions.appendChild(li);
+            });
+
+            suggestions.style.display = filtered.length ? "block" : "none";
+        });
+        // // Tim kiem khi nhan Enter
+        // document.addEventListener("DOMContentLoaded", function () {
+        //     cityInput.addEventListener("keydown", function (event) {
+        //         if (event.key === "Enter") {
+        //             const city = cityInput.value.trim();
+        //             const matchedCity = cityList.find(c => c.toLowerCase() === city.toLowerCase());
+
+        //             if (matchedCity) {
+        //                 fetchWeather(matchedCity);
+        //                 suggestions.style.display = "none";
+        //             }
+        //         }
+        //     });
+        // });
+
+    
+        document.addEventListener("click", (e) => {
+            if (!document.querySelector(".search-box").contains(e.target)) {
+                suggestions.style.display = "none";
+            }
+        });
+
+        function fetchWeather(city) {
+            const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=09a71427c59d38d6a34f89b47d75975c&units=metric`;
+            fetch(url)
+                .then(response => response.json())
+                .then(data => {
+                    document.querySelector(".temp").innerText = data.main.temp.toFixed(1);
+                    document.querySelector(".humidity").innerText = data.main.humidity;
+                    document.querySelector(".wind").innerText = data.wind.speed;
+                    document.querySelector(".feels_like").innerText = data.main.feels_like;
+                    document.querySelector(".description").textContent = viethoachudautien(data.weather[0].description);
+                    document.querySelector(".weather-icon").src = `https://openweathermap.org/img/wn/${data.weather[0].icon}.png`;
+                })
+                .catch(error => console.error('Error fetching weather data:', error));
+        }
+
+        
+        fetchWeather("Alaska");
+        // Viet hoa
+        function viethoachudautien(str) {
+            return str.charAt(0).toUpperCase() + str.slice(1);
+        }
+        // Chuyen doi do C sang F
+        let curentUnit = 'C';
+        document.querySelector(".fah").addEventListener("click", function () {
+            if (curentUnit === 'F') return;
+            const temp = parseFloat(document.querySelector(".temp").innerText);
+            const fahrenheit = (temp * 9 / 5) + 32;
+            document.querySelector(".temp").innerText = fahrenheit.toFixed(1);
+            document.querySelector(".cel").classList.remove("active");
+            document.querySelector(".fah").classList.add("active");
+            curentUnit = 'F';
+        });
+        document.querySelector(".cel").addEventListener("click", function () {
+            if (curentUnit === 'C') return;
+            const temp = parseFloat(document.querySelector(".temp").innerText);
+            const celsius = (temp - 32) * 5 / 9;
+            document.querySelector(".temp").innerText = celsius.toFixed(1);
+            document.querySelector(".fah").classList.remove("active");
+            document.querySelector(".cel").classList.add("active");
+            curentUnit = 'C';
+        });
+    </script>
+</body>
+
+</html>

@@ -59,20 +59,20 @@
 
             suggestions.style.display = filtered.length ? "block" : "none";
         });
-        // // Tim kiem khi nhan Enter
-        // document.addEventListener("DOMContentLoaded", function () {
-        //     cityInput.addEventListener("keydown", function (event) {
-        //         if (event.key === "Enter") {
-        //             const city = cityInput.value.trim();
-        //             const matchedCity = cityList.find(c => c.toLowerCase() === city.toLowerCase());
+        // Tim kiem khi nhan Enter
+        document.addEventListener("DOMContentLoaded", function () {
+            cityInput.addEventListener("keydown", function (event) {
+                if (event.key === "Enter") {
+                    const city = cityInput.value.trim();
+                    const matchedCity = cityList.find(c => c.toLowerCase() === city.toLowerCase());
 
-        //             if (matchedCity) {
-        //                 fetchWeather(matchedCity);
-        //                 suggestions.style.display = "none";
-        //             }
-        //         }
-        //     });
-        // });
+                    if (matchedCity) {
+                        fetchWeather(matchedCity);
+                        suggestions.style.display = "none";
+                    }
+                }
+            });
+        });
 
     
         document.addEventListener("click", (e) => {
