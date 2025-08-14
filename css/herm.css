@@ -1,0 +1,82 @@
+.ms-8{
+    margin-left: 8rem;
+}
+.me-8{
+    margin-right: 8rem;
+}
+.pt-8{
+    padding-top: 8rem;
+}
+.thumbnail-img {
+  width: 40%;
+  aspect-ratio: 1 / 1; /* giữ vuông */
+  object-fit: cover;   
+  cursor: pointer;
+  display: block;
+}
+.thumbnail-container {
+  display: flex;
+  flex-direction: column; /* xếp theo cột */
+  gap: 0.5rem; /* khoảng cách giữa các ảnh */
+}
+.main-img {
+  width: 100%;
+  height: auto;   /* giữ tỉ lệ */
+  
+  object-fit: contain; /* vừa khít cột, không bị cắt */
+  aspect-ratio: 1 / 1;
+}
+body{
+    background-color: rgb(247, 241, 236);
+}
+/* Top utility bar */
+.hermes-topbar {
+  background-color: #f8f8f8;
+  font-size: 0.8rem;
+}
+.hermes-topbar a {
+  color: #555;
+  text-decoration: none;
+}
+.hermes-topbar a:hover {
+  text-decoration: underline;
+}
+
+/* Main navbar styling */
+.hermes-navbar {
+  background-color: #fff;
+}
+
+.hermes-navbar a {
+  color: #111;
+  text-decoration: none;
+}
+
+.hermes-navbar a:hover {
+  color: #f36f21;
+}
+
+/* Menu icon */
+.menu-icon {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+.menu-icon span {
+  display: block;
+  width: 16px;
+  height: 2px;
+  background-color: #111;
+}
+
+/* Logo center */
+.hermes-logo img {
+  display: block;
+  margin: 0 auto;
+}
+
+/* Icons alignment */
+.hermes-navbar svg {
+  display: inline-block;
+  vertical-align: middle;
+}
