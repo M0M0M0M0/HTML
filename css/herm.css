@@ -8,23 +8,27 @@
     padding-top: 8rem;
 }
 .thumbnail-img {
-  width: 40%;
-  aspect-ratio: 1 / 1; /* giữ vuông */
+  width: 60%;
+  aspect-ratio: 1 / 1; 
   object-fit: cover;   
   cursor: pointer;
   display: block;
+  border: 2px solid transparent;
+  transition: border-color 0.2s;
+}
+.thumbnail-img.active {
+  border-color: #007bff; 
 }
 .thumbnail-container {
   display: flex;
-  flex-direction: column; /* xếp theo cột */
-  gap: 0.5rem; /* khoảng cách giữa các ảnh */
+  flex-direction: column;
+  gap: 0.5rem;
 }
 .main-img {
   width: 100%;
-  height: auto;   /* giữ tỉ lệ */
-  
-  object-fit: contain; /* vừa khít cột, không bị cắt */
   aspect-ratio: 1 / 1;
+  margin: 0;
+  padding: 0;
 }
 body{
     background-color: rgb(247, 241, 236);
